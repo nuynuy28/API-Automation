@@ -3,6 +3,7 @@ const expect = require("chai").expect;
 
 describe("Test Dummy API", function () {
     it("1.Get All Products", async function () {
+        //send get request
         const response = await request.get('/products');
         expect(response.status).to.equal(200);
         expect(response.body.products).to.be.an('array');
